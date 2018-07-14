@@ -49,7 +49,7 @@
 (def a-list-read-cond "#?(:cljs [1] :clj [2])")
 
 ;; -----------------------------------------------------------------------------
-;; Exercise 3 (Extra Credit):
+;; Exercise 3:
 ;;
 ;; Write a version of forms-seq that can handle conditional reading. Make it
 ;; so that you can choose to read :clj or :cljs.
