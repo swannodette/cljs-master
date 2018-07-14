@@ -34,7 +34,8 @@
 
 ;; Exercise 1:
 ;;
-;; Write a function that given a file will return a lazy sequence of forms
+;; Write a function that uses form-seq that given a file will return a lazy
+;; sequence of forms
 
 (def a-list "(foo ::a/bar baz) (1 [2] {3 #{}})")
 
@@ -43,3 +44,8 @@
 ;; Try to read the above form. It will fail. Write a version of form-seq that
 ;; can expand aliases, feel free to refer to cljs.analyzer/forms-seq* to figure
 ;; this out. reader/*alias-map* is map of Symbol -> Symbol.
+
+;; Exercise 3 (Extra Credit):
+;;
+;; Write a version of forms-seq that can handle conditional reading. Make it
+;; so that you can choose to read :clj or :cljs.
