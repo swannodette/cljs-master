@@ -63,13 +63,17 @@
 
 (comment
 
-  (binding [ana/*unchecked-if* false]
-    (env/with-compiler-env cenv
-      (comp/emit
-        (ana/analyze-form aenv a-proto nil nil))))
+  (env/with-compiler-env cenv
+    (comp/emit (ana/analyze-form aenv a-proto nil nil)))
 
   )
 
 ;; This analysis will fail. How we do we fix it? Once fixed describe the
 ;; the output. What do protocol fns do?
 
+;; -----------------------------------------------------------------------------
+;; Exercise 5:
+
+;; Write a function that uses your code from cljs-master.reading and
+;; cljs-master.analyzing that will take a file and create an output file of the
+;; compiled JavaScript.
