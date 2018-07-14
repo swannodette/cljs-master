@@ -49,3 +49,9 @@
 ;;
 ;; Write a version of forms-seq that can handle conditional reading. Make it
 ;; so that you can choose to read :clj or :cljs.
+
+;; Exercise 4 (Extra Credit):
+;;
+;; Examine cljs.repl/source-fn. Write a version of of form-seq that does source
+;; logging. Check the meta of the read form the confirm that you have access
+;; to the source.
