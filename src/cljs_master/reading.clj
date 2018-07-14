@@ -31,6 +31,7 @@
 
   )
 
+;; -----------------------------------------------------------------------------
 ;; Exercise 1:
 ;;
 ;; Write a function that uses form-seq that given a file will return a lazy
@@ -38,6 +39,7 @@
 
 (def a-list-alias "(foo ::a/bar baz) (1 [2] {3 #{}})")
 
+;; -----------------------------------------------------------------------------
 ;; Exercise 2:
 ;;
 ;; Try to read the above form. It will fail. Write a version of form-seq that
@@ -46,6 +48,7 @@
 
 (def a-list-read-cond "#?(:cljs [1] :clj [2])")
 
+;; -----------------------------------------------------------------------------
 ;; Exercise 3 (Extra Credit):
 ;;
 ;; Write a version of forms-seq that can handle conditional reading. Make it
@@ -53,6 +56,7 @@
 
 (def a-list-source-logging "(defn foo [a b] (+ a b))")
 
+;; -----------------------------------------------------------------------------
 ;; Exercise 4 (Extra Credit):
 ;;
 ;; Examine cljs.repl/source-fn. Write a version of form-seq that does source
