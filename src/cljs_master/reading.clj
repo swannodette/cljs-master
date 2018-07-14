@@ -16,8 +16,7 @@
                        (PushbackReader. rdr) 1 "<no-filename>")
         forms-seq*   (fn forms-seq* []
                        (lazy-seq
-                         (let [form (binding [*ns* (create-ns ana/*cljs-ns*)
-                                              reader/resolve-symbol ana/resolve-symbol]
+                         (let [form (binding [*ns* (create-ns ana/*cljs-ns*)]
                                       (reader/read opts pbr))]
                            (if (identical? form eof-sentinel)
                              (.close rdr)
@@ -37,7 +36,7 @@
 ;; Write a function that uses form-seq that given a file will return a lazy
 ;; sequence of forms
 
-(def a-list "(foo ::a/bar baz) (1 [2] {3 #{}})")
+(def a-list-alias "(foo ::a/bar baz) (1 [2] {3 #{}})")
 
 ;; Exercise 2:
 ;;
@@ -45,13 +44,17 @@
 ;; can expand aliases, feel free to refer to cljs.analyzer/forms-seq* to figure
 ;; this out. reader/*alias-map* is map of Symbol -> Symbol.
 
+(def a-list-read-cond "#?(:cljs [1] :clj [2])")
+
 ;; Exercise 3 (Extra Credit):
 ;;
 ;; Write a version of forms-seq that can handle conditional reading. Make it
 ;; so that you can choose to read :clj or :cljs.
 
+(def a-list-source-logging "(defn foo [a b] (+ a b))")
+
 ;; Exercise 4 (Extra Credit):
 ;;
-;; Examine cljs.repl/source-fn. Write a version of of form-seq that does source
+;; Examine cljs.repl/source-fn. Write a version of form-seq that does source
 ;; logging. Check the meta of the read form the confirm that you have access
 ;; to the source.
