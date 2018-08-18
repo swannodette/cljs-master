@@ -1,5 +1,6 @@
 (ns cljs-master.analyzing
-  (:require [clojure.pprint :refer [pprint]]
+  (:require [clojure.java.io :refer [file reader]]
+            [clojure.pprint :refer [pprint]]
             [cljs.analyzer :as ana]
             [cljs.env :as env]))
 
