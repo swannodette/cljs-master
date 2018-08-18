@@ -19,7 +19,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Exercise 1:
 ;;
-;; We would like to compile cenv in a different namespace. What do you think
+;; We would like to compile the form in a different namespace. What do you think
 ;; we have to change? Examine ana/empty-env to get a clue.
 
 ;; -----------------------------------------------------------------------------
