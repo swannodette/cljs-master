@@ -37,16 +37,14 @@
 ;; Write a function that uses form-seq that given a file will return a lazy
 ;; sequence of forms
 
-(def a-list-alias "(foo ::a/bar baz) (1 [2] {3 #{}})")
-
 ;; -----------------------------------------------------------------------------
 ;; Exercise 2:
 ;;
-;; Try to read the above form. It will fail. Write a version of form-seq that
+;; Try to read the form below. It will fail. Write a version of form-seq that
 ;; can expand aliases, feel free to refer to cljs.analyzer/forms-seq* to figure
 ;; this out. reader/*alias-map* is map of Symbol -> Symbol.
 
-(def a-list-read-cond "#?(:cljs [1] :clj [2])")
+(def a-list-alias "(foo ::a/bar baz) (1 [2] {3 #{}})")
 
 ;; -----------------------------------------------------------------------------
 ;; Exercise 3:
@@ -54,7 +52,7 @@
 ;; Write a version of forms-seq that can handle conditional reading. Make it
 ;; so that you can choose to read :clj or :cljs.
 
-(def a-list-source-logging "(defn foo [a b] (+ a b))")
+(def a-list-read-cond "#?(:cljs [1] :clj [2])")
 
 ;; -----------------------------------------------------------------------------
 ;; Exercise 4 (Extra Credit):
@@ -62,3 +60,5 @@
 ;; Examine cljs.repl/source-fn. Write a version of form-seq that does source
 ;; logging. Check the meta of the read form the confirm that you have access
 ;; to the source.
+
+(def a-list-source-logging "(defn foo [a b] (+ a b))")
