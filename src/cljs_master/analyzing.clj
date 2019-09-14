@@ -25,21 +25,19 @@
     (env/with-compiler-env cenv
       (ana/analyze-form aenv a-def nil nil)))
 
-  (keys (get-in @cenv [::ana/namespaces]))
+  (keys
+    (get-in
+      @cenv [::ana/namespaces
+             'cljs.core :defs]))
 
   )
 
 ;; -----------------------------------------------------------------------------
 ;; Exercise 1:
-;;
-;; Lookup foo in ::ana/namespaces.
-
-;; -----------------------------------------------------------------------------
-;; Exercise 2:
 
 (def a-defn '(defn foo [a b] (+ a b)))
 
-;; Lookup a a-defn in ::ana/namespaces. How is it different from x?
+;; Lookup a a-defn in ::ana/namespaces.
 
 ;; -----------------------------------------------------------------------------
 ;; Exercise 3:
