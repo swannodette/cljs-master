@@ -65,9 +65,8 @@
 ;; -----------------------------------------------------------------------------
 ;; Exercise 4 (Extra Credit):
 
-;; Here is an incomplete version of analyze-seq. How is the behavior different
-;; form Exercise 2? What's missing. Can you modify it to make it behave the
-;; same?
+;; Here is an incomplete version of analyze-seq. What's missing? Can you add it
+;; back in?
 
 (defn analyze-seq
   ([env form name]
