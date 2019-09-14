@@ -40,7 +40,7 @@
 ;; Lookup a a-defn in ::ana/namespaces.
 
 ;; -----------------------------------------------------------------------------
-;; Exercise 3:
+;; Exercise 2:
 
 (def a-defn-2 '(defn foo [a b] (+ a x)))
 
@@ -57,13 +57,13 @@
   )
 
 ;; -----------------------------------------------------------------------------
-;; Exercise 4:
+;; Exercise 3:
 
 ;; Make a new helper function that uses your cljs-master.analyzing/read-file fn
 ;; and calls analyze-form.
 
 ;; -----------------------------------------------------------------------------
-;; Exercise 5 (Extra Credit):
+;; Exercise 4 (Extra Credit):
 
 ;; Here is an incomplete version of analyze-seq. How is the behavior different
 ;; form Exercise 2? What's missing. Can you modify it to make it behave the
